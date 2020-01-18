@@ -1,0 +1,295 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Forum.master.cs" Inherits="EadpProjectVacation.Forum" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Forum</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="vacation/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="vacation/css/animate.css">
+
+    <link rel="stylesheet" href="vacation/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="vacation/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="vacation/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="vacation/css/aos.css">
+
+    <link rel="stylesheet" href="vacation/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="vacation/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="vacation/css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="vacation/css/forum.css">
+
+    <link rel="stylesheet" href="vacation/css/flaticon.css">
+    <link rel="stylesheet" href="vacation/css/icomoon.css">
+    <link rel="stylesheet" href="vacation/css/style.css">
+
+    <style>
+        .forumBackground {
+    background-color:white;
+    color:black;
+}
+
+.paginationArrow{
+    color:dimgray;
+    padding-right:15px;
+    padding-left:5px;
+}
+
+.paginationBar{
+    padding:15px;
+}
+
+h1{
+    font-size:1.7em;
+    color:mediumpurple;
+}
+
+.pull-left{
+    float:left;
+    display:inline-block;
+}
+
+.pull-right{
+    float:right;
+    display:inline-block;
+}
+
+.v-middle{
+    display:inline-block;
+    position:relative;
+    vertical-align:middle;
+}
+
+.forumModule{
+    background-color:white;
+    color:black;
+}
+
+.forumPad{
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.forumMargin{
+    margin-bottom:30px;
+}
+
+.forumTable{
+    width:300%;
+    height:auto;
+    border: 1px solid black;
+}
+
+.forumTable:hover{
+    
+}
+
+.forumTable th{
+    padding:5px;
+    border:1px solid black;
+}
+
+.forumTable td{
+    padding:5px;
+}
+
+.auto-style2 {
+            height: auto;
+            width: auto;
+            margin-left: auto;
+            display:inline-block;
+}
+
+.auto-style3 {
+        margin-left: auto;
+}
+
+.auto-style4 {
+            display:inline-block;
+}
+
+.auto-style5 {
+            width: auto;
+            height: auto;
+}
+
+.auto-style6 {
+         height: auto;
+         text-align:center;
+ }
+
+.directorylinks{
+    display:inline-block;
+}
+        </style>
+
+</head>
+
+<body>
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <!-- top navigation bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Vacation<span>Travel Agency</span></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span>Menu     
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a style="color: black;" href="vacation/index.html" class="nav-link">home</a></li>
+                    <li class="nav-item dropdown"><a style="color: black;" href="vacation/about.html" class="nav-link">about</a></li>
+                    <li class="nav-item"><a style="color: black;" href="vacation/blog.html" class="nav-link">blog</a></li>
+                    <li class="nav-item"><a style="color: black;" href="/" class="nav-link">Maps</a></li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color:black" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Forum
+                        </a>
+                        <div class="dropdown-menu" >
+                            <a class="dropdown-item" href="#">Ask a question</a>
+                            <a class="dropdown-item" href="#">FAQ</a>
+                            </div>
+                            
+                    </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color:black" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Transportation
+                        </a>
+                        <div class="dropdown-menu" >
+                            <a class="dropdown-item" href="#">Fare-Calculator</a>
+                            <a class="dropdown-item" href="#">Driver's Data</a>
+                        </div>
+                        </li>
+                    <li class="nav-item dropdown" style="left: 0px; top: 0px; height: 38px">
+                        <a class="nav-link dropdown-toggle" style="color:black" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Event
+                        </a>
+                        <div class="dropdown-menu" >
+                            <a class="dropdown-item" href="#">Your Events</a>
+                            <a class="dropdown-item" href="#">What's Going On</a>
+                        </div>
+
+                      </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- testing form-->
+    <section class="ftco-section contact-section">
+
+        <!--start of ForumDesign page-->
+        <div class="auto-style6">
+            <br/>
+            <div class="row directorylinks">
+                <i class="fas fa-camera"></i>
+                <a href="#">Home</a><i class ="fas fa-chevron-circle-right paginationArrow"></i>
+                <!-- comment
+                <a href="#">Category</a><i class="fas fa-chevron-circle-right paginationArrow"></i>
+                <a href="#">Discussion</a>
+                -->   
+            </div>
+         </div>
+
+        <div class="container">
+            <div class="row block-9">
+                <div class="col-md-12 order-md-last d-flex">
+                    <form action="#" class="bg-light p-5 contact-form" runat="server">   
+                        <div class="form-group">
+                            <asp:Label ID="Label2" runat="server" Text="Title:"></asp:Label>
+                            <input id="inputTitle" type="text" runat="server" class="form-control" placeholder="Title"/>
+                                <!--labelVerification-->
+                            <asp:Label ID="label3" runat="server" Text="This is a verification"></asp:Label>
+                        </div>
+
+                        <div class="form-group">
+                            <asp:Button ID="BtnBold" runat="server" Text="Bold" Width="98px" class="btn btn-secondary"/>
+                            <asp:Button ID="BtnItalic" runat="server" Text="Italic" Width="110px" class="btn btn-secondary" />
+                            <asp:Button ID="BtnSave" runat="server" Text="Save a draft" Width="200px" class="btn btn-secondary"/>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea name="" id="textareaMsg" cols="30" rows="7" class="form-control" placeholder="Message" runat="server"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <asp:Label id="Label1" runat="server" Text="Additional documents"></asp:Label>
+                        </div>
+
+                        <div class="form-group">
+                            <asp:Label ID="Image" runat="server" Text="Image:"></asp:Label>
+                        </div>
+                                   
+                        <div class="form-group">
+                            <asp:Image ID="imgPicture" Width="200" Height="200" runat="server" />
+                        </div>
+
+                        <div class="form-group">
+                            <asp:FileUpload ID="FileUploadImage" runat="server" onchange="readURL(this)"/>
+                        </div>
+                                    
+                        <div class="form-group">
+                            <asp:Button ID="Button1" runat="server" Text="Submit" class="btn btn-primary py-3 px-5 pull-right" OnClick="BtnSubmit_Click"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+        <!--end of ForumDesign page-->
+        
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imgPicture').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#FileUploadImage").change(function () {
+            readURL(this);
+        });
+    </script>
+    
+    
+    <script src="vacation/js/jquery.min.js"></script>
+    <script src="vacation/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="vacation/js/popper.min.js"></script>
+    <script src="vacation/js/bootstrap.min.js"></script>
+    <script src="vacation/js/jquery.easing.1.3.js"></script>
+    <script src="vacation/js/jquery.waypoints.min.js"></script>
+    <script src="vacation/js/jquery.stellar.min.js"></script>
+    <script src="vacation/js/owl.carousel.min.js"></script>
+    <script src="vacation/js/jquery.magnific-popup.min.js"></script>
+    <script src="vacation/js/aos.js"></script>
+    <script src="vacation/js/jquery.animateNumber.min.js"></script>
+    <script src="vacation/js/bootstrap-datepicker.js"></script>
+    <script src="vacation/js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="vacation/js/google-map.js"></script>
+    <script src="vacation/js/main.js"></script>
+  
+</body>
+</html>
